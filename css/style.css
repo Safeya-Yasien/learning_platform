@@ -28,6 +28,7 @@ a {
 
 .page {
   height: 100vh;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -75,4 +76,56 @@ a {
   opacity: 1;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.sidebar ul.sub-menu li a:first-child {
+  margin-top: 10px;
+}
+
+.sidebar ul.sub-menu li a {
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* start content */
+.content {
+}
+
+.content .head {
+  padding: 10px;
+  background-color: darkgray;
+  justify-content: space-between;
+}
+
+.content .head .search {
+  flex-direction: row-reverse;
+}
+
+.content .head .search i {
+  cursor: pointer;
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.content .head .search input {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 5px;
+  width: 150px;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.content .head .search:hover input,
+content .head .search input:hover {
+  opacity: 1;
+}
+
+.content .head .page_title h1 {
+  margin: 0;
+  letter-spacing: 10px;
+  font-style: italic;
+  text-transform: uppercase;
 }

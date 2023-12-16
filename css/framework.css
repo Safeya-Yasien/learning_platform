@@ -32,3 +32,9 @@
   padding: 20px;
 }
 /* end padding */
+
+/* start width */
+.w-100 {
+  width: 100%;
+}
+/* end width */
