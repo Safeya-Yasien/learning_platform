@@ -7,6 +7,16 @@
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
+  height: 3000px;
+}
+
+:root {
+  --black-color: #000;
+  --white-color: #fff;
+  --background-color: #11101d;
+  --main-color: #982d6b;
+  --paragraph-color: #aaaaaa;
+  /* --orange-color: #ee4b2b; */
 }
 
 ul {
@@ -18,12 +28,22 @@ a {
 }
 
 ::-webkit-scrollbar {
+  width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
+  background-color: #1f1e34;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2d2c4c;
 }
 
 ::-webkit-scrollbar-track {
+  background-color: var(--paragraph-color);
+  box-shadow: 0 0 10px inset;
 }
 
 .page {
@@ -32,23 +52,31 @@ a {
 }
 
 .sidebar {
-  background-color: #ddd;
-  /* background-color: #11101d; */
+  background-color: var(--background-color);
   width: 78px;
   z-index: 1000;
+  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.3), -10px 0 15px rgba(0, 0, 0, 0.3);
+  border-right: 1px solid var(--white-color);
 }
 
 .sidebar .logo i {
   font-size: 30px;
+  color: var(--paragraph-color);
 }
 
 .sidebar ul li > a {
   justify-content: center;
+  color: var(--paragraph-color);
+  transition: 0.4s;
+}
+
+.sidebar ul li > a:hover {
+  color: #cccccc;
 }
 
 .sidebar ul.sub-menu li a {
   transition: 0.3s;
-  color: white;
+  color: var(--white-color);
 }
 
 .sidebar ul li i {
@@ -62,9 +90,10 @@ a {
 
 .sidebar ul.sub-menu {
   position: absolute;
-  left: 100%;
+  /* left: 100%; */
+  left: 59px;
   top: -10px;
-  background-color: black;
+  background-color: var(--black-color);
   border-radius: 0px 6px 6px 0px;
   padding: 3px 20px 6px 16px;
   opacity: 0;
@@ -93,8 +122,11 @@ a {
 
 .content .head {
   padding: 10px;
-  background-color: darkgray;
+  background-color: var(--background-color);
   justify-content: space-between;
+  color: #982d6b;
+  border-right: 1px solid var(--white-color);
+  max-height: 70px;
 }
 
 .content .head .search {
@@ -118,6 +150,12 @@ a {
   transition: opacity 0.3s ease-out;
 }
 
+@media (max-width: 767px) {
+  .content .head .search input {
+    width: 72px;
+  }
+}
+
 .content .head .search:hover input,
 content .head .search input:hover {
   opacity: 1;
@@ -128,4 +166,75 @@ content .head .search input:hover {
   letter-spacing: 10px;
   font-style: italic;
   text-transform: uppercase;
+}
+
+.content .head .logo a {
+  display: flex;
+  align-items: center;
+}
+
+.content .head .logo img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+/* wrapper */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  margin: 20px 20px 40px;
+  gap: 20px;
+}
+
+/* about + contact-us*/
+.content .about h3,
+.content .contact-us h3 {
+  color: var(--main-color);
+}
+
+.content .about p,
+.content .contact-us p {
+  color: var(--paragraph-color);
+  line-height: 1.6;
+}
+
+/* contact us */
+.content .contact-us .image {
+}
+
+.content .contact-us img {
+  width: 180px;
+}
+
+.content .contact-us ul {
+  padding: 0;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 15px;
+}
+
+.content .contact-us ul li {
+}
+
+.content .contact-us ul li a {
+  color: var(--main-color);
+  background-color: transparent;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+
+.content .contact-us ul li a:hover {
+  color: #bf517b;
+}
+
+.content .contact-us ul li a i {
+  font-size: 20px;
 }

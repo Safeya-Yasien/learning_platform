@@ -1,3 +1,12 @@
+:root {
+  --black-color: #000;
+  --white-color: #fff;
+  --background-color: #11101d;
+  --main-color: #982d6b;
+  --paragraph-color: #aaaaaa;
+  /* --orange-color: #ee4b2b; */
+}
+
 /* start flex */
 .d-flex {
   display: flex;
@@ -33,8 +42,37 @@
 }
 /* end padding */
 
+/* start margin */
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.m-0 {
+  margin: 0px;
+}
+/* end margin */
+
 /* start width */
 .w-100 {
   width: 100%;
 }
 /* end width */
+
+/* start border */
+.radius-10 {
+  border-radius: 10px;
+}
+/* end border */
+
+/* start font-size */
+.f-12 {
+  font-size: 12px;
+}
+/* end font-size */
+
+/* start bg-colors */
+.bg-black {
+  background-color: var(--black-color);
+}
+/* end bg-colors */
