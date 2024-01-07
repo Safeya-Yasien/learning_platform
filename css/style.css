@@ -287,6 +287,68 @@ content .head .search input:hover {
   color: var(--link-hover-color);
 }
 
+/* html_page */
+
+/* .content .starting-point {
+  grid-area: 1/2/1/2;
+}
+
+@media (max-width: 767px) {
+  .content .starting-point {
+    grid-area: auto;
+  }
+} */
+
+.content .starting-point h3 {
+  color: var(--main-color);
+  text-align: center;
+}
+
+.content .starting-point .html-explain {
+  gap: 25px;
+}
+
+@media (max-width: 767px) {
+  .content .starting-point .html-explain {
+    flex-direction: column;
+  }
+}
+
+.content .starting-point .html-youtube p,
+.content .starting-point .html-assignments p {
+  color: var(--paragraph-color);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.content .starting-point .html-youtube div p,
+.content .starting-point .html-assignments div p {
+  margin: 0;
+}
+
+.content .starting-point .html-youtube a,
+.content .starting-point .html-assignments a {
+  color: var(--main-color);
+  transition: var(--main-transition);
+  border-bottom: 1px solid var(--paragraph-color);
+  margin-bottom: 10px;
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.content .starting-point .html-youtube a:hover,
+.content .starting-point .html-assignments a:hover {
+  color: var(--link-hover-color);
+}
+
+.content .starting-point .html-assignments {
+}
+
+.content .starting-point .html-explain-arbic {
+  /* border-right: 1px solid var(--white-color); */
+}
+
 @keyframes moving-right {
   0% {
     transform: translateX(5px);
